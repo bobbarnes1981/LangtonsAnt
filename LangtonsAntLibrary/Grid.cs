@@ -28,6 +28,8 @@ namespace LangtonsAntLibrary
             m_height = height;
             m_data = new State[width, height];
             m_ant = new Ant(Direction.North);
+            m_ant.X = width / 2;
+            m_ant.Y = height / 2;
         }
 
         public void Step()
@@ -53,21 +55,21 @@ namespace LangtonsAntLibrary
                     break;
             }
             // wrap grid coordinates
-            if (m_ant.Y == m_width)
+            if (m_ant.Y == m_height)
             {
                 m_ant.Y = 0;
             }
             if (m_ant.Y == -1)
             {
-                m_ant.Y = m_width - 1;
+                m_ant.Y = m_height - 1;
             }
-            if (m_ant.X == m_height)
+            if (m_ant.X == m_width)
             {
                 m_ant.X = 0;
             }
             if (m_ant.X == -1)
             {
-                m_ant.X = m_height - 1;
+                m_ant.X = m_width - 1;
             }
         }
 

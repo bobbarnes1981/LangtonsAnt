@@ -37,6 +37,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,19 +58,28 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="libpng12-0.dll">
+    <Content Include="..\Libraries\libpng12-0.dll">
+      <Link>libpng12-0.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SDL.dll">
+    <Content Include="..\Libraries\SDL.dll">
+      <Link>SDL.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SDL_image.dll">
+    <Content Include="..\Libraries\SDL_gfx.dll">
+      <Link>SDL_gfx.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SDL_mixer.dll">
+    <Content Include="..\Libraries\SDL_image.dll">
+      <Link>SDL_image.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="zlib1.dll">
+    <Content Include="..\Libraries\SDL_mixer.dll">
+      <Link>SDL_mixer.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Libraries\zlib1.dll">
+      <Link>zlib1.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

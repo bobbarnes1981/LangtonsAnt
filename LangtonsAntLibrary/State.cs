@@ -8,7 +8,7 @@ namespace LangtonsAntLibrary
 {
     public enum State
     {
-        Red,
-        White
+        White,
+        Red
     }
 }
