@@ -12,21 +12,21 @@ namespace LangtonsAntSDL
 {
     public class Viewer
     {
-        private static Surface m_video;
+        private Surface m_video;
 
-        private static Grid m_grid;
+        private Grid m_grid;
 
-        private static float m_elapsed;
+        private float m_elapsed;
 
-        private static float m_step = 0.02f;
+        private float m_step = 0.02f;
 
-        private static int m_xScale;
+        private int m_xScale;
 
-        private static int m_yScale;
+        private int m_yScale;
 
-        private static int m_width;
+        private int m_width;
 
-        private static int m_height;
+        private int m_height;
 
         public Viewer(int gridWidth, int gridHeight, int scale, float step)
         {
@@ -46,7 +46,7 @@ namespace LangtonsAntSDL
             Events.Run();
         }
 
-        private static void ApplicationTickEventHandler(object sender, TickEventArgs args)
+        private void ApplicationTickEventHandler(object sender, TickEventArgs args)
         {
             m_elapsed += args.SecondsElapsed;
             if (m_elapsed > m_step)
@@ -75,7 +75,7 @@ namespace LangtonsAntSDL
             m_video.Update();
         }
 
-        private static void ApplicationQuitEventHandler(object sender, QuitEventArgs args)
+        private void ApplicationQuitEventHandler(object sender, QuitEventArgs args)
         {
             Events.QuitApplication();
         }
